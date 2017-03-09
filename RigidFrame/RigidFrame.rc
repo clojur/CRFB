@@ -1,0 +1,1033 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1251)\r\n"
+    "#include ""res\\RigidFrame.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_BARADJUST_THEME     PNG                     "res\\ThemeThemes.png"
+IDB_LAYOUTSMALL         PNG                     "res\\layoutsmall.png"
+IDB_RIBBON_ALL          PNG                     "res\\RigidframeRibbon.png"
+IDB_SHOW_MODEL          PNG                     "res\\KK.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_WORKSPACE           BITMAP                  "res\\bpm_workspacebar.bmp"
+IDB_OUTMANAGER          BITMAP                  "res\\ResManager.bmp"
+IDB_TREE_VIEW           BITMAP                  "res\\workspacebar_tree.bmp"
+IDB_RFMICON             BITMAP                  "res\\RfmIcon.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_OUTPUT_ALL MENU
+BEGIN
+    MENUITEM "目录",                          ID_32879
+    MENUITEM "设计说明",                        ID_32875
+    MENUITEM "全桥工程数量表",                     ID_32874
+    MENUITEM "地质纵剖面图",                      ID_32876
+    MENUITEM "桥位平面图",                       ID_32877
+    MENUITEM "桥型总布置图",                      ID_32878
+END
+
+IDR_POPUP_PROJECT_OPERATOR MENU
+BEGIN
+    POPUP "ProjectOperator"
+    BEGIN
+        MENUITEM "打开桥梁",                        ID_BRIDGE_OPEN
+        MENUITEM "重命名",                         ID_RENAME_BRIDGE
+        MENUITEM SEPARATOR
+        MENUITEM "删除桥梁",                        ID_DEL_BRIDGE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_NEWPRJ DIALOGEX 0, 0, 295, 97
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新建连续刚构工程"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_NEWPRJ_EDIT1,95,19,184,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定(&O)",IDOK,165,74,53,16
+    PUSHBUTTON      "取消(&C)",IDCANCEL,227,74,53,16
+    LTEXT           "工程名称:",IDC_STATIC,32,22,45,11
+    LTEXT           "工程文件路径:",IDC_STATIC,32,42,63,11
+    EDITTEXT        IDC_EDIT_PRJPATH,95,39,184,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_NEWBRIDGE DIALOGEX 0, 0, 283, 110
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新增桥梁"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_NEWBRIDGE,135,21,134,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS,135,56,135,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定(&O)",IDOK,155,87,53,16
+    PUSHBUTTON      "取消(&C)",IDCANCEL,216,87,53,16
+    LTEXT           "桥梁名称:",IDC_STATIC,135,9,44,10
+    CONTROL         ID_PRJ_NEW,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,7,7,107,96
+    LTEXT           "中心里程:",IDC_STATIC,135,44,48,9
+END
+
+IDD_DLG_RENAMEBRG DIALOGEX 0, 0, 239, 69
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "桥梁重命名"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_BRIDGENAME,62,18,165,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定(&O)",IDOK,114,46,53,16
+    PUSHBUTTON      "取消(&C)",IDCANCEL,175,46,53,16
+    LTEXT           "新桥名:",IDC_STATIC,24,20,37,10,0,WS_EX_TRANSPARENT
+END
+
+IDD_DLG_DELBRG DIALOGEX 0, 0, 240, 84
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "删除桥梁"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "删除(&D)",ID_DEL,115,61,53,16
+    PUSHBUTTON      "取消(&C)",IDCANCEL,176,61,53,16
+    LTEXT           "选择 “移除” 可将文件从项目中移除",IDC_STATIC,26,16,146,10
+    LTEXT           "选择 “删除” 可永久删除文件",IDC_STATIC,27,32,118,9
+    DEFPUSHBUTTON   "移除(&R)",ID_REMOVE,53,61,53,16
+END
+
+IDD_DLG_LOADROAD DIALOGEX 0, 0, 313, 172
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "导入路线数据"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,197,150,50,14
+    PUSHBUTTON      "取消",IDCANCEL,251,150,50,14
+    EDITTEXT        IDC_EDT_DESIGN,15,21,220,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_GROUND,15,79,218,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BTN_DESIGN,245,21,50,14
+    GROUPBOX        "设计线数据",IDC_STATIC,7,7,295,40
+    GROUPBOX        "地面线数据",IDC_STATIC,7,51,292,81
+    PUSHBUTTON      "浏览",IDC_BTN_GROUND,244,78,50,14
+    EDITTEXT        IDC_EDT_CROSS,15,113,218,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BTN_CROSS,244,112,50,14
+    LTEXT           "横断面数据文件",IDC_STATIC,15,98,58,12
+    LTEXT           "纵断面数据文件",IDC_STATIC,15,64,58,11
+    LTEXT           "水位标高：",IDC_STATIC,8,145,41,13
+    EDITTEXT        IDC_EDT_WATER,50,144,40,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_CELLSPLIT_YZ DIALOGEX 0, 0, 231, 224
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "节段智能划分原则"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_REMAIN,170,16,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_INITWEB,170,32,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_25MIN,67,71,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_25MAX,170,71,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_30MIN,67,88,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_30MAX,170,88,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_35MIN,67,105,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_35MAX,170,105,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_40MIN,67,122,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_40MAX,170,122,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_45MIN,67,139,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_45MAX,170,139,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_50MIN,67,156,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_50MAX,170,156,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_55MIN,67,173,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_55MAX,170,173,44,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定(&O)",IDOK,168,201,53,16
+    LTEXT           "2.5m最少:",IDC_STATIC,24,74,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "3.0m最少:",IDC_STATIC,24,91,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "3.5m最少:",IDC_STATIC,24,108,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "4.0m最少:",IDC_STATIC,24,125,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "4.5m最少:",IDC_STATIC,24,142,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "5.0m最少:",IDC_STATIC,24,159,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "5.5m最少:",IDC_STATIC,24,176,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "2.5m最多:",IDC_STATIC,127,74,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "3.0m最多:",IDC_STATIC,127,91,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "3.5m最多:",IDC_STATIC,127,108,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "4.0m最多:",IDC_STATIC,127,125,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "4.5m最多:",IDC_STATIC,127,142,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "5.0m最多:",IDC_STATIC,127,159,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "5.5m最多:",IDC_STATIC,127,176,40,11,0,WS_EX_TRANSPARENT
+    LTEXT           "悬臂根部的剩余长度(m):",IDC_STATIC,69,19,99,11,0,WS_EX_TRANSPARENT
+    LTEXT           "初始的节段腹板厚度(m):",IDC_STATIC,69,35,99,11,0,WS_EX_TRANSPARENT
+    ICON            IDR_MAINFRAME,IDC_STATIC,28,21,20,20
+    GROUPBOX        "",IDC_STATIC,9,60,213,135
+    GROUPBOX        "",IDC_STATIC,9,4,213,52
+END
+
+IDD_DLG_CELLSPLIT DIALOGEX 0, 0, 481, 258
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "智能节段划分"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "划分(&A)",IDSPLIT,146,8,53,16
+    DEFPUSHBUTTON   "原则...",IDSPLITYZ,206,8,53,16
+    COMBOBOX        IDC_COMBO_XB,64,10,76,80,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "悬臂长类型:",IDC_STATIC,12,13,51,10
+    LISTBOX         IDC_TYPELIST,7,29,134,222,LBS_SORT | LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_CELLSHOW,"Static",SS_BLACKRECT,141,29,333,222
+END
+
+IDD_DLG_LAYOUTYZ DIALOGEX 0, 0, 309, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "自动布孔原则"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,198,202,50,14
+    DEFPUSHBUTTON   "取消",IDCANCEL,252,202,50,14
+    GROUPBOX        "试用范围",IDC_STATIC,11,7,288,33
+    CONTROL         "方案设计",IDC_PROGRAM_DESIGN,"Button",BS_AUTORADIOBUTTON,47,21,48,10
+    CONTROL         "初步设计",IDC_INITIAL_DESIGN,"Button",BS_AUTORADIOBUTTON,126,21,48,10
+    CONTROL         "施工图设计",IDC_DEEP_DESIGN,"Button",BS_AUTORADIOBUTTON,206,21,56,10
+    GROUPBOX        "控制参数",IDC_STATIC,11,42,288,156
+    EDITTEXT        IDC_EDIT1,77,56,25,12,ES_AUTOHSCROLL
+    LTEXT           "主桥边中跨比：",IDC_STATIC,21,58,56,13
+    EDITTEXT        IDC_EDIT2,113,56,25,12,ES_AUTOHSCROLL
+    LTEXT           "~",IDC_STATIC,105,58,8,8
+    EDITTEXT        IDC_EDIT3,77,72,25,12,ES_AUTOHSCROLL
+    LTEXT           "主桥主跨跨径：",IDC_STATIC,21,74,56,12
+    EDITTEXT        IDC_EDIT4,113,72,25,12,ES_AUTOHSCROLL
+    LTEXT           "~",IDC_STATIC,105,74,8,8
+    EDITTEXT        IDC_EDIT5,226,57,25,12,ES_AUTOHSCROLL
+    LTEXT           "引桥墩高范围：",IDC_STATIC,170,59,56,12
+    EDITTEXT        IDC_EDIT6,262,57,25,12,ES_AUTOHSCROLL
+    LTEXT           "~",IDC_STATIC,254,59,8,8
+    EDITTEXT        IDC_EDIT7,226,73,25,12,ES_AUTOHSCROLL
+    LTEXT           "引桥标准跨径：",IDC_STATIC,170,75,56,12
+    EDITTEXT        IDC_EDIT8,262,73,25,12,ES_AUTOHSCROLL
+    LTEXT           "~",IDC_STATIC,254,75,8,8
+    CONTROL         "是否考虑大小T",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,180,68,10
+END
+
+IDD_DLG_SECT DIALOGEX 0, 0, 535, 307
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "桥梁断面信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_CENTERPOS21,386,108,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS22,469,108,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS20,386,124,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS4,469,124,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS3,386,143,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS6,469,143,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS7,386,161,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS8,469,161,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS9,386,179,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS10,469,179,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS11,386,196,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS12,469,196,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS13,386,215,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS14,470,215,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS15,386,233,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS16,470,233,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS18,386,251,46,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS19,470,251,46,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO2,418,15,103,49,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO1,418,34,103,49,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CENTERPOS,418,50,103,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CENTERPOS2,418,68,102,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "文件导入(&I)",IDOK2,357,284,53,16
+    DEFPUSHBUTTON   "存储模板(&S)",IDOK4,419,284,53,16
+    DEFPUSHBUTTON   "确定(&O)",IDOK,475,284,53,16
+    GROUPBOX        "",IDC_STATIC,7,3,521,278
+    LTEXT           "横坡类型:",IDC_STATIC,362,34,44,12
+    LTEXT           "横坡值:",IDC_STATIC,362,54,38,12
+    LTEXT           "护栏宽度:",IDC_STATIC,362,71,38,12
+    LTEXT           "设计高位置:",IDC_STATIC,362,15,54,12
+    LTEXT           "A:",IDC_STATIC,368,145,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "h:",IDC_STATIC,452,127,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "A1:",IDC_STATIC,452,145,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "A3:",IDC_STATIC,368,164,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "A4:",IDC_STATIC,452,164,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "A5:",IDC_STATIC,368,182,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "B1:",IDC_STATIC,452,182,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "B2:",IDC_STATIC,368,199,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "B3:",IDC_STATIC,452,199,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "B4:",IDC_STATIC,368,217,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "B5:",IDC_STATIC,452,217,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "B6:",IDC_STATIC,368,236,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "B7:",IDC_STATIC,452,236,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "B8:",IDC_STATIC,368,254,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "B9:",IDC_STATIC,452,254,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "B:",IDC_STATIC,368,127,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "WT:",IDC_STATIC,368,111,16,9,0,WS_EX_TRANSPARENT
+    LTEXT           "WB:",IDC_STATIC,451,111,16,9,0,WS_EX_TRANSPARENT
+END
+
+IDD_DLG_CELLSPLIT_PLAN DIALOGEX 0, 0, 118, 129
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    LISTBOX         IDC_ITEMS,4,45,111,66,LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_XBLIST,44,26,70,79,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "T构对象:",IDC_STATIC,5,29,38,12
+    PUSHBUTTON      "重新划分所有T构(&S)",IDC_RESPLIT_PLAN,5,4,107,17,BS_NOTIFY
+    CONTROL         "所有T构采用统一方案",IDC_SPLIT_UNIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,113,88,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DLG_NEWPRJ, DIALOG
+    BEGIN
+    END
+
+    IDD_DLG_NEWBRIDGE, DIALOG
+    BEGIN
+    END
+
+    IDD_DLG_RENAMEBRG, DIALOG
+    BEGIN
+    END
+
+    IDD_DLG_DELBRG, DIALOG
+    BEGIN
+    END
+
+    IDD_DLG_LOADROAD, DIALOG
+    BEGIN
+    END
+
+    IDD_DLG_CELLSPLIT_YZ, DIALOG
+    BEGIN
+        RIGHTMARGIN, 227
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_DLG_CELLSPLIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 474
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_DLG_LAYOUTYZ, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_DLG_SECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 528
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 300
+    END
+
+    IDD_DLG_CELLSPLIT_PLAN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 111
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDS_MAIN_TOOLBAR        "Standard"
+    IDS_WINDOWS_MANAGER     "&Windows..."
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "CDIP连续刚构设计系统 "
+    IDR_RigidFrameTYPE      "\n刚构\n刚构\n连续刚构工程 (*.Ffm)\n.rfm\nRigidFrame.Document\nRigidFrame.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "RigidFrame"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "向工程中添加一座新的连续刚构桥\n新增桥梁"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "保存当前工程，它包含多座连续刚构桥梁\n保存工程"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_DIRECT    "Send the document directly to the default printer without making changes\nQuick Print"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示连续刚构设计系统信息, 版本和版权\n关于"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_MANAGER       "Manages the currently opened window\nWindow List"
+    ID_VIEW_APPLOOK_2000    "Activate Office 2000 application look\nOffice 2000 Look"
+    ID_VIEW_APPLOOK_XP      "Activate Office XP application look\nOffice XP Look"
+    ID_VIEW_APPLOOK_2003    "Activate Office 2003 application look\nOffice 2003 Look"
+    ID_VIEW_APPLOOK_WINDOWS_NATIVE 
+                            "Activate Windows native application look\nWindows Native Look"
+    ID_VIEW_APPLOOK_VS2005  "Activate Visual Studio 2005 application look\nVS 2005 Look"
+    ID_VIEW_APPLOOK_2007    "Activate Office 2007 application look\nOffice 2007 Look (Blue)"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_APPLOOK_2007_1  "Activate Office 2007 application look\nOffice 2007 Look (Black)"
+    ID_VIEW_APPLOOK_2007_2  "Activate Office 2007 application look\nOffice 2007 Look (Silver)"
+    ID_VIEW_APPLOOK_2007_3  "Activate Office 2007 application look\nOffice 2007 Look (Aqua)"
+    ID_VIEW_APPLOOK_VS2008  "Activate Visual Studio 2008 application look\nVS 2008 Look"
+    ID_VIEW_APPLOOK_VS2010  "Activate Visual Studio 2010 application look\nVS 2010 Look"
+    ID_VIEW_APPLOOK_2010_1  "Activate Office 2010 application look\nOffice 2010 Look (Blue)"
+    ID_VIEW_APPLOOK_2010_2  "Activate Office 2010 application look\nOffice 2010 Look (Black)"
+    ID_VIEW_APPLOOK_2010_3  "Activate Office 2010 application look\nOffice 2010 Look (Silver)"
+    ID_VIEW_APPLOOK_SCENIC  "Activate Windows 7/8 application look\nWindows 7/8 Look"
+    ID_VIEW_APPLOOK_VS2013_LIGHT 
+                            "Activate Visual Studio 2013 Light application look\nVS 2013 Look Light"
+    ID_VIEW_APPLOOK_VS2013_DARK 
+                            "Activate Visual Studio 2013 Dark application look\nVS 2013 Look Dark"
+    ID_VIEW_APPLOOK_VS2013_BLUE 
+                            "Activate Visual Studio 2013 Blue application look\nVS 2013 Look Blue"
+    ID_VIEW_APPLOOK_2013_1  "Activate Office 2013 application look\nOffice 2013 Look (White)"
+    ID_VIEW_APPLOOK_2013_2  "Activate Office 2013 application look\nOffice 2013 Look (Light Gray)"
+    ID_VIEW_APPLOOK_2013_3  "Activate Office 2013 application look\nOffice 2013 Look (Dark Gray)"
+    ID_VIEW_APPLOOK_2016_1  "Activate Office 2016 application look\nOffice 2016 Look (Colorful)"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_APPLOOK_2016_2  "Activate Office 2016 application look\nOffice 2016 Look (Dark Gray)"
+    ID_VIEW_APPLOOK_2016_3  "Activate Office 2016 application look\nOffice 2016 Look (White)"
+    ID_TOOLS_OPTIONS        "Changes application options\nOptions"
+    ID_STATUSBAR_PANE1      "Status bar indicator 1"
+    ID_STATUSBAR_PANE2      "Status bar indicator 2"
+END
+
+STRINGTABLE
+BEGIN
+    ID_PRJ_NEW              "创建新的工程，它包含多座连续刚构桥梁\n新建工程"
+    ID_PRJ_OPEN             "打开已有工程，它包含多座连续刚构桥梁\n打开工程"
+    ID_PRJ_SAVE             "保存当前工程到文件\n保存工程"
+END
+
+STRINGTABLE
+BEGIN
+    ID_PRJ_TOTAL            "设置连续刚构工程全局桥幅信息\n设置桥幅信息"
+    ID_PRJ_ROAD             "导入本工程的路线数据(平面、纵面、横断、地面线)\n导入路线数据"
+    ID_PRJ_SECT             "设置当前桥梁标准截面信息\n设置刚构标准截面"
+    ID_PRJ_GEOLOGY          "设置当前桥梁的工程地质信息\n设置地质条件"
+    ID_PRJ_HYDROLOGY        "设置当前桥梁的工程水文信息\n设置水文条件"
+    ID_DESIGN_CBASESTAKE    "主桥布置情况(单位:米)\n主桥中心桩号"
+END
+
+STRINGTABLE
+BEGIN
+    ID_DESIGN_DRAIN         "进行刚构桥桥面排水设计\n桥面排水设计"
+    ID_DESIGN_FRAMEWORK     "进行刚构合龙段劲性骨架的详细设计\n合龙段劲性骨架设计"
+    ID_DESIGN_JOINT         "进行刚构桥伸缩缝选型设计(主桥)\n伸缩缝选型设计"
+    ID_DESIGN_MAINPIER      "进行刚构主墩详细设计(包含构造及配筋)\n主墩详细设计"
+    ID_DESIGN_CAP           "进行刚构主墩承台详细设计(包含构造及配筋)\n主墩承台详细设计"
+    ID_DESIGN_PILL          "进行刚构主墩桩基设计\n桩基设计"
+    ID_DESIGN_CHIBAN        "进行钢束锚固的齿板设计(包含构造、配筋)\n齿板设计"
+    ID_DESIGN_TRANSIT       "进行刚构过渡墩详细设计(包含构造及配筋)\n过渡墩设计"
+    ID_DESIGN_LAYOUT_YZ     "设置刚构桥智能布设的原则\n原则"
+    ID_DESIGN_LAYOUT_ACTION "进行刚构桥智能布设(孔跨、梁底曲线等)\n智能布跨"
+    ID_OUTPUT_MANAGER       "输出图册管理(目录等)\n图册管理"
+    ID_OUTPUT_DRAWING       "输出图纸(含dwg、dxf、pdf等格式)\n输出图纸"
+    ID_OUT_DETAIL           "出图前的预览、修改等工作\n图纸详细编辑"
+    ID_PRJ_BARSET           "设置普通钢筋规格参数\n钢筋规格"
+    ID_PRJ_METERIAL         "设置预应力钢筋及锚具等材料规格参数\n钢束及锚具规格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_PRJ_CLOSEALL         "关闭所有\n关闭所有"
+    ID_PRJ_CLOSEWNDALL      "关闭所有打开的窗口\n关闭所有窗口"
+END
+
+STRINGTABLE
+BEGIN
+    ID_DESIGN_LLAYOUT       "左引桥布置情况(单位:米)\n左引桥布置"
+    ID_DESIGN_RLAYOUT       "右引桥布置情况(单位:米)\n右引桥布置"
+    ID_DESIGN_CLAYOUT       "主桥布置情况(单位:米)\n主桥布置"
+    ID_DESIGN_LMOVE         "将刚构向左按移动增量整体移动\n向左整体移动"
+    ID_DESIGN_RMOVE         "将刚构向右按移动增量整体移动\n向右整体移动"
+    ID_DESIGN_MOVEDIS       "刚构布设总体移动增量值(单位:米)\n移动增量"
+    ID_DESIGN_LAYOUT_MACTION "按照用户指定的孔跨布设刚构\n按输入布跨"
+    ID_DESIGN_DOWNYZ        "设置刚构桥下部构造智能设计原则\n下部构造智能设计原则"
+    ID_DESIGN_DOWNAUTO      "进行下部构造智能设计\n下部构造智能设计"
+    ID_DESIGN_TRANSITCAP    "进行刚构过渡墩承台设计(包含构造及配筋)\n过渡墩承台设计"
+    ID_DESIGN_TRANSITPILL   "进行刚构过渡墩桩基设计\n过渡墩桩基设计"
+    ID_DESIGN_APR_ABT       "进行刚构引桥桥台详细设计\n引桥桥台设计"
+    ID_DESIGN_APR_DOWN      "进行刚构引桥下部详细设计\n引桥下部设计"
+    ID_DESIGN_APR_UP        "进行刚构引桥上部详细设计\n引桥上部设计"
+    ID_OUTPUT_DOCTORBRIDGE  "导出结构计算模型到桥梁博士系统\n桥梁博士"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OUTPUT_MIDAS         "导出结构计算模型到迈达斯系统\n迈达斯"
+    ID_DESIGN_CELL          "按指定原则对刚构进行节段划分\n智能划分"
+    ID_DESIGN_CELLYZ        "设置刚构智能划分节段的原则\n节段划分原则"
+    ID_DESIGN_SHOWCELLLEN   "在视图中显示刚构节段的长度\n显示节段长度"
+    ID_DESIGN_SHOWWEIGHT    "在视图中显示刚构节段的重量\n显示节段重量"
+    ID_DESIGN_CELL_0        "进行刚构0号块的构造及配筋设计\n0号块设计"
+    ID_DESIGN_CELL_BK       "进行刚构边跨现浇段的构造及配筋设计\n边跨现浇段设计"
+    ID_DESIGN_CELL_GER      "进行刚构普通节段的构造及配筋设计\n普通节段设计"
+    ID_DESIGN_CELL_HGB      "进行刚构跨中横隔板的构造及配筋设计\n跨中横隔板设计"
+    ID_DESIGN_BARYZ         "指定预应力钢束的布设原则(包括纵、横、竖向)\n指定钢束设计原则"
+    ID_DESIGN_BARAUTO       "进行预应力钢束智能布设(包含纵、横、竖向)\n钢束智能布设"
+    ID_DESIGN_BARADJUST     "进行预应力钢束的详细调整(包含纵、横、竖向)\n钢束调整"
+    ID_DESIGN_BARCHECK      "进行预应力钢束检查(包含碰撞、规格等)\n钢束检查"
+    ID_DESIGN_PAVE          "进行刚构桥桥面铺装设计\n桥面铺装设计"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_RIBBON_ICONS        PNG                     "res\\ribbonicons.png"
+IDB_RIBBON_MAIN         PNG                     "res\\ribbonmain.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "",                            ID_VIEW_TOOLBARS
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        POPUP "&Application Look"
+        BEGIN
+            MENUITEM "Office &2000",                ID_VIEW_APPLOOK_2000
+            MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_XP
+            MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_2003
+            MENUITEM "Visual Studio 200&5",         ID_VIEW_APPLOOK_VS2005
+            MENUITEM "&Windows Native",             ID_VIEW_APPLOOK_WINDOWS_NATIVE
+            POPUP "Office 200&7"
+            BEGIN
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_2007
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_2007_1
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_2007_2
+                MENUITEM "&Aqua Style",                 ID_VIEW_APPLOOK_2007_3
+            END
+            MENUITEM "Visual Studio 200&8",         ID_VIEW_APPLOOK_VS2008
+            MENUITEM "Visual Studio 20&10",         ID_VIEW_APPLOOK_VS2010
+            POPUP "Office 201&0"
+            BEGIN
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_2010_1
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_2010_2
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_2010_3
+            END
+            MENUITEM "Window&s 7/8",                ID_VIEW_APPLOOK_SCENIC
+            POPUP "Visual Studi&o 2013"
+            BEGIN
+                MENUITEM "&Light Style",                ID_VIEW_APPLOOK_VS2013_LIGHT
+                MENUITEM "&Dark Style",                 ID_VIEW_APPLOOK_VS2013_DARK
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_VS2013_BLUE
+            END
+            POPUP "Office 20&13"
+            BEGIN
+                MENUITEM "&White Style",                ID_VIEW_APPLOOK_2013_1
+                MENUITEM "&Light Gray Style",           ID_VIEW_APPLOOK_2013_2
+                MENUITEM "&Dark Gray Style",            ID_VIEW_APPLOOK_2013_3
+            END
+            POPUP "Office 201&6"
+            BEGIN
+                MENUITEM "&Colorful Style",             ID_VIEW_APPLOOK_2016_1
+                MENUITEM "&Dark Gray Style",            ID_VIEW_APPLOOK_2016_2
+                MENUITEM "&White Style",                ID_VIEW_APPLOOK_2016_3
+            END
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About RigidFrame...",        ID_APP_ABOUT
+    END
+END
+
+IDR_RigidFrameTYPE MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "",                            ID_VIEW_TOOLBARS
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        POPUP "&Application Look"
+        BEGIN
+            MENUITEM "Office &2000",                ID_VIEW_APPLOOK_2000
+            MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_XP
+            MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_2003
+            MENUITEM "Visual Studio 200&5",         ID_VIEW_APPLOOK_VS2005
+            MENUITEM "&Windows Native",             ID_VIEW_APPLOOK_WINDOWS_NATIVE
+            POPUP "Office 200&7"
+            BEGIN
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_2007
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_2007_1
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_2007_2
+                MENUITEM "&Aqua Style",                 ID_VIEW_APPLOOK_2007_3
+            END
+            MENUITEM "Visual Studio 200&8",         ID_VIEW_APPLOOK_VS2008
+            MENUITEM "Visual Studio 20&10",         ID_VIEW_APPLOOK_VS2010
+            POPUP "Office 201&0"
+            BEGIN
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_2010_1
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_2010_2
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_2010_3
+            END
+            MENUITEM "Window&s 7/8",                ID_VIEW_APPLOOK_SCENIC
+            POPUP "Visual Studi&o 2013"
+            BEGIN
+                MENUITEM "&Light Style",                ID_VIEW_APPLOOK_VS2013_LIGHT
+                MENUITEM "&Dark Style",                 ID_VIEW_APPLOOK_VS2013_DARK
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_VS2013_BLUE
+            END
+            POPUP "Office 20&13"
+            BEGIN
+                MENUITEM "&White Style",                ID_VIEW_APPLOOK_2013_1
+                MENUITEM "&Light Gray Style",           ID_VIEW_APPLOOK_2013_2
+                MENUITEM "&Dark Gray Style",            ID_VIEW_APPLOOK_2013_3
+            END
+            POPUP "Office 201&6"
+            BEGIN
+                MENUITEM "&Colorful Style",             ID_VIEW_APPLOOK_2016_1
+                MENUITEM "&Dark Gray Style",            ID_VIEW_APPLOOK_2016_2
+                MENUITEM "&White Style",                ID_VIEW_APPLOOK_2016_3
+            END
+        END
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About RigidFrame...",        ID_APP_ABOUT
+    END
+END
+
+IDR_POPUP_TOOLBAR MENU
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "Standard Toolbar",            ID_VIEW_TOOLBAR
+    END
+END
+
+IDR_POPUP_MDITABS MENU
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "&Save",                       ID_FILE_SAVE
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "New &Horizontal Tab Group",   ID_MDI_NEW_HORZ_TAB_GROUP
+        MENUITEM "New &Vertical Tab Group",     ID_MDI_NEW_VERT_GROUP
+        MENUITEM "Move to Ne&xt Tab Group",     ID_MDI_MOVE_TO_NEXT_GROUP
+        MENUITEM "Move to P&revious Tab Group", ID_MDI_MOVE_TO_PREV_GROUP
+    END
+END
+
+IDR_POPUP_DROP_MDITABS MENU
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "New &Horizontal Tab Group",   ID_MDI_NEW_HORZ_TAB_GROUP
+        MENUITEM "New &Vertical Tab Group",     ID_MDI_NEW_VERT_GROUP
+        MENUITEM "Move to Ne&xt Tab Group",     ID_MDI_MOVE_TO_NEXT_GROUP
+        MENUITEM "Move to P&revious Tab Group", ID_MDI_MOVE_TO_PREV_GROUP
+        MENUITEM SEPARATOR
+        MENUITEM "&Cancel",                     ID_MDI_CANCEL
+    END
+END
+
+IDR_WINDOWS_MENU MENU
+BEGIN
+    MENUITEM "&New Window",                 ID_WINDOW_NEW
+END
+
+IDR_THEME_MENU MENU
+BEGIN
+    MENUITEM "Office 2007 &Blue Theme",     ID_VIEW_APPLOOK_2007
+    MENUITEM "Office 2007 B&lack Theme",    ID_VIEW_APPLOOK_2007_1
+    MENUITEM "Office 2007 &Silver Theme",   ID_VIEW_APPLOOK_2007_2
+    MENUITEM "Office 2007 &Aqua Theme",     ID_VIEW_APPLOOK_2007_3
+    MENUITEM SEPARATOR
+    MENUITEM "Office 2010 Bl&ue Theme",     ID_VIEW_APPLOOK_2010_1
+    MENUITEM "Office 2010 Blac&k Theme",    ID_VIEW_APPLOOK_2010_2
+    MENUITEM "Office 2010 Sil&ver Theme",   ID_VIEW_APPLOOK_2010_3
+    MENUITEM SEPARATOR
+    MENUITEM "Windows Scen&ic Theme",       ID_VIEW_APPLOOK_SCENIC
+    MENUITEM SEPARATOR
+    MENUITEM "Office 2013 &White Theme",    ID_VIEW_APPLOOK_2013_1
+    MENUITEM "Office 2013 Ligh&t Gray Theme", ID_VIEW_APPLOOK_2013_2
+    MENUITEM "Office 2013 &Dark Gray Theme", ID_VIEW_APPLOOK_2013_3
+    MENUITEM SEPARATOR
+    MENUITEM "Office 2016 Color&ful Theme", ID_VIEW_APPLOOK_2016_1
+    MENUITEM "Office 2016 Dark &Gray Theme", ID_VIEW_APPLOOK_2016_2
+    MENUITEM "Office 2016 W&hite Theme",    ID_VIEW_APPLOOK_2016_3
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About RigidFrame"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,21,20
+    LTEXT           "RigidFrame Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2016",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+    PUSHBUTTON      "http://www.<MyCompany>.com",IDC_COMPANY_URL,40,36,119,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\RigidFrame.ico"
+IDR_RigidFrameTYPE      ICON                    "res\\RigidFrameDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "004090"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "RigidFrame.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "RigidFrame.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1251)
+#include "res\RigidFrame.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="对话框">
+      <UniqueIdentifier>{9d13bb23-c5f4-4e09-8003-778640091191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="界面类">
+      <UniqueIdentifier>{34c13f7c-ae76-4cc1-8159-f982d69db2b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RigidFrame.reg" />
+    <None Include="res\RigidFrame.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dialog objects\DlgAutoLayoutYz.h">
+      <Filter>对话框</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog objects\DlgCellSplitYz.h">
+      <Filter>对话框</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog objects\DlgDelBridge.h">
+      <Filter>对话框</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog objects\DlgLoadRoad.h">
+      <Filter>对话框</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog objects\DlgNewBridge.h">
+      <Filter>对话框</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog objects\DlgNewPrj.h">
+      <Filter>对话框</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog objects\DlgRenameBridge.h">
+      <Filter>对话框</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog objects\DlgSectInfo.h">
+      <Filter>对话框</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\CellSplitPane.h">
+      <Filter>界面类</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\ClassTreeWnd.h">
+      <Filter>界面类</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\RibbonListButton.h">
+      <Filter>界面类</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\tinyxml2.h">
+      <Filter>界面类</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\WorkSpaceBar.h">
+      <Filter>界面类</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Project.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidFrame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidFrameDoc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidFrameView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Dialog objects\DlgAutoLayoutYz.cpp">
+      <Filter>对话框</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog objects\DlgCellSplitYz.cpp">
+      <Filter>对话框</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog objects\DlgDelBridge.cpp">
+      <Filter>对话框</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog objects\DlgLoadRoad.cpp">
+      <Filter>对话框</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog objects\DlgNewBridge.cpp">
+      <Filter>对话框</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog objects\DlgNewPrj.cpp">
+      <Filter>对话框</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog objects\DlgRenameBridge.cpp">
+      <Filter>对话框</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog objects\DlgSectInfo.cpp">
+      <Filter>对话框</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface\CellSplitPane.cpp">
+      <Filter>界面类</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface\ClassTreeWnd.cpp">
+      <Filter>界面类</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface\RibbonListButton.cpp">
+      <Filter>界面类</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface\tinyxml2.cpp">
+      <Filter>界面类</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface\WorkSpaceBar.cpp">
+      <Filter>界面类</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Project.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidFrame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidFrameDoc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidFrameView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bpm_workspacebar.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bs_share.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\DownStruct.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\help.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\help_colored.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\icon1.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\KK.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\layoutsmall.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\OtherDesign.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ResManager.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\RfmIcon.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ribbon.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ribbonfilelarge.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ribbonfilesmall.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ribbonhomelarge.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ribbonhomesmall.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ribbonicons.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ribbonmain.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\RigidFrame.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\RigidFrameDoc.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\RigidframeRibbon.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ThemeThemes.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ViewHelp.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\workspacebar_tree.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RigidFrame.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

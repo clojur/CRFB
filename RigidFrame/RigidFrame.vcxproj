@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C8C1789D-0EB2-4F22-A096-F065DE96A5FD}</ProjectGuid>
+    <RootNamespace>RigidFrame</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenThreadsd.lib;osgd.lib;osgDBd.lib;osgUtild.lib;osgGAd.lib;osgViewerd.lib;osgTextd.lib;osgManipulatord.lib;osgFXd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenThreads.lib;osg.lib;osgDB.lib;osgUtil.lib;osgGA.lib;osgViewer.lib;osgText.lib;osgManipulator.lib;osgFX.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\RigidFrame.rc2" />
+    <None Include="RigidFrame.reg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="Dialog objects\DlgAutoLayoutYz.h" />
+    <ClInclude Include="Dialog objects\DlgCellSplitYz.h" />
+    <ClInclude Include="Dialog objects\DlgDelBridge.h" />
+    <ClInclude Include="Dialog objects\DlgLoadRoad.h" />
+    <ClInclude Include="Dialog objects\DlgNewBridge.h" />
+    <ClInclude Include="Dialog objects\DlgNewPrj.h" />
+    <ClInclude Include="Dialog objects\DlgRenameBridge.h" />
+    <ClInclude Include="Dialog objects\DlgSectInfo.h" />
+    <ClInclude Include="Interface\CellSplitPane.h" />
+    <ClInclude Include="Interface\ClassTreeWnd.h" />
+    <ClInclude Include="Interface\RibbonListButton.h" />
+    <ClInclude Include="Interface\tinyxml2.h" />
+    <ClInclude Include="Interface\WorkSpaceBar.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Project.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RigidFrame.h" />
+    <ClInclude Include="RigidFrameDoc.h" />
+    <ClInclude Include="RigidFrameView.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="Dialog objects\DlgAutoLayoutYz.cpp" />
+    <ClCompile Include="Dialog objects\DlgCellSplitYz.cpp" />
+    <ClCompile Include="Dialog objects\DlgDelBridge.cpp" />
+    <ClCompile Include="Dialog objects\DlgLoadRoad.cpp" />
+    <ClCompile Include="Dialog objects\DlgNewBridge.cpp" />
+    <ClCompile Include="Dialog objects\DlgNewPrj.cpp" />
+    <ClCompile Include="Dialog objects\DlgRenameBridge.cpp" />
+    <ClCompile Include="Dialog objects\DlgSectInfo.cpp" />
+    <ClCompile Include="Interface\CellSplitPane.cpp" />
+    <ClCompile Include="Interface\ClassTreeWnd.cpp" />
+    <ClCompile Include="Interface\RibbonListButton.cpp" />
+    <ClCompile Include="Interface\tinyxml2.cpp" />
+    <ClCompile Include="Interface\WorkSpaceBar.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="Project.cpp" />
+    <ClCompile Include="RigidFrame.cpp" />
+    <ClCompile Include="RigidFrameDoc.cpp" />
+    <ClCompile Include="RigidFrameView.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bpm_workspacebar.bmp" />
+    <Image Include="res\bs_share.png" />
+    <Image Include="res\DownStruct.png" />
+    <Image Include="res\help.ico" />
+    <Image Include="res\help_colored.ico" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\KK.png" />
+    <Image Include="res\layoutsmall.png" />
+    <Image Include="res\OtherDesign.png" />
+    <Image Include="res\ResManager.bmp" />
+    <Image Include="res\RfmIcon.bmp" />
+    <Image Include="res\ribbon.png" />
+    <Image Include="res\ribbonfilelarge.png" />
+    <Image Include="res\ribbonfilesmall.png" />
+    <Image Include="res\ribbonhomelarge.png" />
+    <Image Include="res\ribbonhomesmall.png" />
+    <Image Include="res\ribbonicons.png" />
+    <Image Include="res\ribbonmain.png" />
+    <Image Include="res\RigidFrame.ico" />
+    <Image Include="res\RigidFrameDoc.ico" />
+    <Image Include="res\RigidframeRibbon.png" />
+    <Image Include="res\ThemeThemes.png" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\ViewHelp.png" />
+    <Image Include="res\workspacebar_tree.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RigidFrame.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="RigidFrame.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

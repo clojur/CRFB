@@ -1,0 +1,14 @@
+// BCGSoft Designer automatically generated file.
+// Do not edit.
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// BCGP_RIBBON_XML
+//
+
+IDR_BCGP_RIBBON_XML BCGP_RIBBON_XML "res\\BCGSoft_ribbon\\ribbon.xml"
